@@ -116,3 +116,24 @@ Standard Operating Procedure (SOP) Steps:
    - Changes are off-cycle released to test, stage, and prod environments to minimize disruption.
 
 ====
+
+Standard Operating Procedure (SOP) Steps:
+
+1. Initiation:
+   - When the development team is not in the midst of their release cycle, the DevOps team initiates the PowerPlatform Wave Update in the sandbox environment.
+
+2. Validation:
+   - Following the update, both the development and DevOps teams perform thorough validation checks to ensure system stability and functionality.
+
+3. Bug Identification:
+   - If any bugs are identified during the validation process, the development team is promptly notified.
+
+4. Bug Reproduction:
+   - The development team identifies the appropriate development environment to reproduce the issue.
+   - Upon identification, they may request to apply the Wave Update in their development environment to replicate the bug accurately.
+
+5. Bug Resolution:
+   - Once the bug is reproduced, the development team proceeds to fix the error.
+
+6. Release Management:
+   - Following bug resolution, the changes are released to the test, stage, and production environments as an off-cycle release, ensuring minimal disruption to the regular release cycle.

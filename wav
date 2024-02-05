@@ -46,3 +46,29 @@
    - Environments without early access updates are automatically updated once a release wave is generally available.
 
 By adhering to these procedures and guidelines, users can effectively manage and leverage the updates offered by the Power Platform and ensure a smooth transition to new functionalities.
+
+==================
+
+Steps to copy an environment:
+
+1. Access the Power Platform admin center and sign in with Environment Admin or System Administrator credentials.
+2. Navigate to Environments from the left-side menu and choose the environment to copy.
+3. Click on Copy from the top menu bar.
+4. Choose the desired copy level: Everything or Customizations and schemas only.
+5. Select the target environment, ensuring it's not a production environment and is within the same tenant and region.
+6. Edit details for the copied environment if necessary and confirm the copy operation.
+7. Review the copied environment's status once the copy process is complete.
+
+Steps to include audit logs (if needed):
+
+1. Follow steps 1-5 as above.
+2. Under Audit logs, click to include audit logs.
+3. Enable copying audit logs and continue with steps 6-9.
+
+Next steps after copying an environment:
+
+1. Newly created copy environment is placed in administration mode.
+2. Background operations are disabled in the copy environment.
+3. Review and potentially disable or redirect application components with external connections, such as Email, SharePoint, and Yammer.
+4. Consider disabling or reviewing platform extensibility components like server-side plug-ins, client-side JavaScript, and flows.
+5. Review connection references and custom connectors as needed.

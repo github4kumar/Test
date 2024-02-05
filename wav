@@ -72,3 +72,47 @@ Next steps after copying an environment:
 3. Review and potentially disable or redirect application components with external connections, such as Email, SharePoint, and Yammer.
 4. Consider disabling or reviewing platform extensibility components like server-side plug-ins, client-side JavaScript, and flows.
 5. Review connection references and custom connectors as needed.
+
+
+====
+
+Standard Operating Procedure (SOP) Steps:
+
+1. Update Application:
+   - During inactive development periods, DevOps applies PowerPlatform Wave Update in the sandbox environment.
+
+2. Validation:
+   - Dev and DevOps teams validate the update for potential issues.
+
+3. Bug-free Confirmation:
+   - If no bugs are identified, the environment is considered frozen.
+
+4. Update Propagation:
+   - DevOps applies wave updates across all tiers: Development, Test, Stage, and Production environments.
+
+====
+
+Standard Operating Procedure (SOP) Steps:
+
+1. Initiation:
+   - Despite ongoing development cycles, DevOps applies PowerPlatform Wave Update in the sandbox environment.
+
+2. Validation:
+   - Dev and DevOps teams validate post-update for system integrity.
+
+3. Bug Identification:
+   - Identified bugs prompt the dev team to request a new environment from DevOps.
+
+4. New Environment Setup:
+   - DevOps collaborates with CIT to establish a new environment, applying necessary updates.
+
+5. Bug Reproduction:
+   - Dev team reproduces bugs in the new environment.
+
+6. Bug Resolution:
+   - Upon reproduction, dev team resolves errors.
+
+7. Off-cycle Release:
+   - Changes are off-cycle released to test, stage, and prod environments to minimize disruption.
+
+====

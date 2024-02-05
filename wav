@@ -1,0 +1,48 @@
+**SOP Background and Instructions for Power Platform Wave Updates:**
+
+1. **Background:**
+   - Microsoft Power Platform and customer engagement apps teams release two major updates annually, in April and October, introducing new capabilities and functionalities.
+
+2. **Early Access Option:**
+   - Users may opt in for early access to these updates, available approximately two months before general availability in their region.
+
+3. **Opt-in Process:**
+   - Access Power Platform admin center and select the desired environment for update.
+   - Navigate to "Updates," then "Manage," and choose "Update now" to proceed.
+   - Upon completion, early access features activate for model-driven apps.
+
+4. **Important Considerations:**
+   - Updates to environments occur simultaneously and cannot be reverted after deployment.
+   - It's advisable to update sandbox or trial environments before production to assess impact.
+   - Ensure licensed apps receive updates; uninstalled applications remain unaffected.
+
+5. **Update Status and Retry:**
+   - Monitor update progress through the Power Platform admin center.
+   - Utilize the Retry option for failed updates, available exclusively for early access updates.
+
+6. **Confirmation and Opt-in Status:**
+   - Confirm update completion by checking the deployed release wave under environment settings.
+
+7. **Features in Early Access Updates:**
+   - Early access updates include mandatory features automatically available for users.
+   - Features are categorized based on user type and activation requirement.
+
+8. **Preparing for a Release Wave:**
+   - Review release plans promptly upon early access availability.
+   - Create and utilize sandbox environments for testing new features to prevent irreversible deployment in production.
+   - Opt in for early access updates and validate key scenarios post-update.
+
+9. **Early Access Updates FAQ:**
+   - Opt in for each early access release; environments don't auto-opt in.
+   - Solutions can be exported to similarly updated environments.
+   - Version numbers may not necessarily change with each release wave.
+   - Microsoft doesn't provide free sandbox environments; users are responsible for their creation.
+   - Updates availability for testing in sandbox environments corresponds with early access availability.
+
+10. **Post-Update Actions:**
+   - Report any issues with updates by creating a support ticket.
+   - Skipping or postponing updates isn't permissible to ensure timely adoption of new features.
+   - Environments with early access updates continue receiving updates throughout the release wave.
+   - Environments without early access updates are automatically updated once a release wave is generally available.
+
+By adhering to these procedures and guidelines, users can effectively manage and leverage the updates offered by the Power Platform and ensure a smooth transition to new functionalities.

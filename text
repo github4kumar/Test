@@ -1,302 +1,39 @@
-A Content Management System (CMS) for a news agency is a software application that enables the creation, management, and publication of digital content. This can include news articles, images, videos, and other multimedia content. The architecture of a CMS for a news agency using PowerApps, Power Automate Flow, REST services, Azure Functions, Power BI, and databases can be broken down into the following components:
+Good afternoon everyone,
 
-1. User Interface
-The user interface is the front-end component of the CMS that enables users to interact with the system. PowerApps is a low-code platform that allows developers to create custom business applications without writing code. The user interface for the CMS can be created using PowerApps to provide a seamless and intuitive experience for content creators, editors, and publishers.
+In todays world data is everywhere , finding the relevant information becomes increasing challanging.
+Traditionally, we relied on crawling and indexing the vast dataset into a long running batch process to make just the data retival faster. But imagine if instead of just speeding up data retrival , we could apply additional Artificial Intilligence skills during the indexing process to produce more meaningful and precise search results. 
+That is where AZure AI search comes in. Azure AI search service is designed to handle large volume of data that integrates seamlessly with various datasources and delivers higly relevant results by leveraging the power of AI skillsets.
 
-2. Workflow Automation
-Power Automate Flow is a cloud-based service that enables users to create automated workflows between applications and services. In a CMS for a news agency, Power Automate Flow can be used to automate the content creation, review, and publishing process. For example, when a new article is created, a workflow can be triggered to automatically assign it to an editor for review.
+Lets breakdown the key building blocks of Azure AI search service and understnad how it works.
 
-3. REST Services
-REST (Representational State Transfer) is a software architectural style that defines a set of constraints to be used for creating web services. RESTful APIs can be used to enable communication between different components of the CMS. For example, REST services can be used to retrieve article metadata from a database or to publish content to a content delivery network (CDN).
+The Datasources are the origin of the data we want to search. Azure AI search can connect to variety of sources such as AZure SQl DB, Blob Storage , COsmos DB and even external sources via REST API. This felxibility ensures you can bring data almost from any platform.
 
-4. Azure Functions
-Azure Functions is a serverless compute service that enables developers to run event-driven code on a scalable and cost-effective platform. In a CMS for a news agency, Azure Functions can be used to perform tasks such as image resizing or video transcoding. For example, when a new image is uploaded to the CMS, an Azure Function can be triggered to resize the image to a specific resolution.
+INdexers - are the automated process that pulls the data from the data sources into the search index on regular scheduled, ensuring that your search results are always upto date without manual intervention.
 
-5. Databases
-Databases are used to store and manage content and metadata in the CMS. The choice of database will depend on factors such as scalability, performance, and cost. In a CMS for a news agency, a combination of relational and NoSQL databases can be used. For example, a relational database can be used to store article metadata, while a NoSQL database can be used to store multimedia content.
+AI skillsets are where magics happens. The Inbuilt AI driven capabilities can extract meaningful
+information from the raw content. For example Optical character recognition (OCR) can read the data from the images, sentiment analysis can guage the tone of the documents and entity recognition can identify names and dates. We can even create  custom skills in the form of Azure function and apply during the indexing process.
 
-6. Power BI
-Power BI is a business analytics service that enables users to visualize and analyze data from various sources. In a CMS for a news agency, Power BI can be used to provide insights into content performance, user engagement, and other key metrics. For example, a Power BI dashboard can be created to track article views, shares, and comments.
+INDEX - The index is the core of the Azure AI search. It origanizes the data into the searchable structure. An index contains schema definition which outlines the fields and their types and documents, which are stored as  individual records. The structure allows for efficient searching and retrival of information 
 
-===================
 
+====== Slide SOP
 
+This particlar slide depicts the design aspect of the Azure search and represents how it can  
+be utilize to extract , enrich and index SOP data from Blob storage, create a seamless user search experience 
 
-Here is a detailed architecture diagram for a solution for Customer Relationship Management (CRM) using Power Platforms:
+The unstructured PDF format SOP data resides on the Blob storeage container 
+The files are injested into the AI search service based on the indexer data sorce configration.
+Azure search provide built-in AI capabilities such as OCR, entity recoginitions to extract the relevant  information from the documents.
+Through these pre-built AI skills the extrated data or chunk of data is further ENRICHED with metadata , annotations  and its relationship
 
-![CRM using Power Platforms Architecture Diagram](https://i.imgur.com/qjkzZbS.png)
+once the SOP data is extracted and enriched,  AI search indexes the documents making it searchable and accessible .
 
-The above diagram depicts a typical architecture for a CRM solution using Power Platforms. The solution consists of the following components:
+A web application serves as the interface for the users to query the indexed SOP's documents.
 
-1. User Interface
-The user interface is the front-end component of the CRM that enables users to interact with the system. PowerApps is used to create custom business applications without writing code. The user interface for the CRM can be created using PowerApps to provide a seamless and intuitive experience for sales representatives, customer service agents, and other users.
+* Upon querying the index relevant documents contents are passed throught the GPT model to generate the summaries or contextual information
 
-2. Data Storage
-Data storage is where all the customer-related data is stored. Dynamics 365 is a cloud-based business application platform that provides a robust and scalable data storage solution for the CRM. Dynamics 365 offers a variety of tools and features to manage customer data, including sales, marketing, customer service, and operations.
+* The GPT model enhances the understanding of SOP documents providing users with valuable insight and citation.
 
-3. Workflow Automation
-Power Automate is a cloud-based service that enables users to create automated workflows between applications and services. In a CRM solution, Power Automate can be used to automate the lead generation process, follow-up tasks, and customer support requests. For example, when a new lead is generated, a workflow can be triggered to send an email to the sales representative for follow-up.
-
-4. Integration Services
-Integration services enable communication between different components of the CRM. Power Automate, Azure Logic Apps, and Azure Functions can be used to integrate the CRM with other applications and services, such as email, social media, and third-party CRM systems. For example, Power Automate can be used to integrate the CRM with a social media platform to monitor customer feedback and sentiment.
-
-5. Analytics and Reporting
-Power BI is a business analytics service that enables users to visualize and analyze data from various sources. In a CRM solution, Power BI can be used to provide insights into customer behavior, sales performance, and other key metrics. For example, a Power BI dashboard can be created to track lead generation, customer acquisition, and retention rates.
-
-Overall, the CRM solution using Power Platforms provides a complete and integrated solution for managing customer relationships. The solution can be customized to meet the specific needs of the business and can be easily integrated with other applications and services to provide a seamless experience for users.
-
-=====
-
-Sure, here is a secure system architecture diagram for an airline reservations system using PowerApps, Power Automate, chatbot, Dataverse, REST API, and Azure Functions:
-
-![Secure System Architecture Diagram for Airline Reservations System using PowerApps, Power Automate, Chatbot, Dataverse, REST API, and Azure Functions](https://i.imgur.com/N4ON3qA.png)
-
-Here is a breakdown of the components of the architecture:
-
-1. PowerApps: The user interface for the airline reservations system. It is used by the airline staff and customers to book and manage reservations.
-
-2. Power Automate: A workflow automation tool that is used to automate business processes. In this architecture, Power Automate is used to automate tasks such as sending confirmation emails, updating the reservation status, and sending notifications to the airline staff.
-
-3. Chatbot: A conversational interface that allows customers to interact with the airline reservations system using natural language. The chatbot is built using Microsoft Bot Framework and can be integrated with PowerApps and Power Automate.
-
-4. Dataverse: A data storage and management system that is used to store reservation data. Dataverse provides data-level security features, such as role-based access control, to ensure that reservation data is secure.
-
-5. REST API: An interface that allows external applications to access reservation data stored in Dataverse. The REST API is secured using Azure API Management and requires authentication to access reservation data.
-
-6. Azure Functions: A serverless compute service that is used to run business logic in response to events. In this architecture, Azure Functions are used to process reservation requests, update reservation status, and send notifications to the airline staff.
-
-7. Azure Active Directory: A cloud-based identity and access management service that is used to manage user access to PowerApps, Power Automate, and Dataverse. Azure AD provides multi-factor authentication and single sign-on capabilities to enhance the security of the airline reservations system.
-
-This architecture provides a secure and scalable solution for an airline reservations system. The system can handle a large number of reservations and users, and provides a seamless experience for both the customers and the airline staff.
-
-==
-
-PowerApps offers several security features that can help you manage user access and ensure that your application is secure. Here are some best practices for PowerApps security and onboarding users:
-
-1. Use role-based security: Assign roles to users based on their job function or responsibility. Limit access to certain parts of the application based on these roles.
-
-2. Implement data-level security: Use PowerApps' data-level security features to restrict access to data based on user roles. This can help ensure that sensitive data is only accessible to authorized users.
-
-3. Enable multi-factor authentication: Require users to use multi-factor authentication to access the application. This provides an extra layer of security and helps protect against unauthorized access.
-
-4. Use Azure Active Directory: Use Azure Active Directory to manage user access to PowerApps. This allows you to centralize user management and simplify the onboarding process.
-
-5. Regularly review access: Regularly review user access and remove access for users who no longer require it. This can help ensure that only authorized users have access to the application and its data.
-
-6. Test for vulnerabilities: Regularly test the application for vulnerabilities and address any issues that are identified. This can help ensure that the application is secure and that data is protected.
-
-When onboarding users, it is important to ensure that they understand how to use the application and how to follow security protocols. Here are some best practices for onboarding users:
-
-1. Provide training: Provide training on how to use the application and its security features. This can help ensure that users understand how to use the application effectively and securely.
-
-2. Assign roles: Assign roles to users based on their job function or responsibility. This can help ensure that users have access to the features they need to do their job.
-
-3. Provide access to documentation: Provide users with access to documentation on how to use the application and its security features. This can help ensure that users have the information they need to use the application effectively and securely.
-
-4. Enforce security protocols: Ensure that users understand and follow security protocols such as password policies and multi-factor authentication.
-
-5. Monitor usage: Monitor user usage to ensure that users are using the application appropriately and to identify any security concerns. This can help ensure that the application is being used effectively and securely.
-
-====
-
-Here's a complete solution architecture diagram for an airline reservations system using PowerApps, Power Automate, chatbot, Dataverse, REST API, Azure Functions, and Cosmos DB:
-
-```
-+-----------------------+                    +------------------------+
-|                       |                    |                        |
-|     PowerApps         |                    |      Chatbot           |
-|                       |                    |                        |
-+----------^------------+                    +------------^-----------+
-           |                                               |
-           |                                               |
-+----------v------------+                    +------------v-----------+
-|                       |                    |                        |
-|    Power Automate      |                    |      REST API          |
-|                       |                    |                        |
-+----------^------------+                    +------------^-----------+
-           |                                               |
-           |                                               |
-+----------v------------+                    +------------v-----------+
-|                       |                    |                        |
-|       Dataverse       |                    |      Azure Functions   |
-|                       |                    |                        |
-+----------^------------+                    +------------^-----------+
-           |                                               |
-           |                                               |
-+----------v------------+                    +------------v-----------+
-|                       |                    |                        |
-|       Cosmos DB       |                    |                        |
-|                       |                    |                        |
-+-----------------------+                    +------------------------+
-```
-
-Solution Components Description:
-
-The solution components of the airline reservation system are described below:
-
-1. PowerApps - Custom application designed for booking and managing airline reservations. This app can be accessed by employees or customers to book flights, manage reservations, and view flight schedules.
-
-2. Power Automate - Workflows that automate various airline reservation tasks such as sending confirmation emails, booking reminders, and alerts when flights are delayed or cancelled.
-
-3. Chatbot - Conversational interface that allows customers to interact with the airline reservation system using natural language. This can be used to book or modify flights, view flight status, and receive notifications.
-
-4. Dataverse - Cloud-based database that stores all data related to airline reservations, including flight schedules, customer information, and payment details.
-
-5. REST API - A RESTful API that provides access to airline reservation data and functionality. This API can be used by external applications and services to retrieve flight information, book flights, and retrieve customer information.
-
-6. Azure Functions - Serverless compute platform that hosts the REST API and provides automatic scaling and high availability.
-
-7. Cosmos DB - Globally distributed NoSQL database that can store large volumes of airline reservation data. This can be used to store flight schedules, customer information, and payment details.
-
-Solution Architecture Description:
-
-The solution architecture for the airline reservation system includes a custom application built using PowerApps that allows employees or customers to book and manage airline reservations. The app can be accessed on multiple devices such as smartphones, tablets, and desktop computers.
-
-Power Automate workflows can be used to automate tasks related to airline reservations, such as sending confirmation emails, booking reminders, and alerts when flights are delayed or cancelled.
-
-A chatbot can be used to allow customers to interact with the airline reservation system using natural language. This can be used to book or modify flights, view flight status, and receive notifications.
-
-Dataverse can be used to store and manage all data related to airline reservations, including flight schedules, customer information, and payment details. The REST API can be used to expose this data and functionality to external applications and services.
-
-Azure Functions can be used to host the REST API and provide serverless compute power. This ensures that the API is always available and can scale up or down as needed.
-
-Cosmos DB can be used to store and manage large volumes of data related to airline reservations. This includes flight schedules, customer information, and payment details. The data can be accessed and analyzed using various tools such as Power BI, which can be used to generate reports on airline reservation trends and performance indicators
-
-====
-
-Here's an example use case for the solution architecture mentioned in the previous answer:
-
-Use Case: Inventory Management System
-
-A company wants to build an inventory management system to track its products and stock levels. The system should allow employees to view and update product information, receive alerts when stock levels are low, and generate reports on inventory trends.
-
-Solution Architecture Diagram:
-
-```
-+-----------------------+                    +------------------------+
-|                       |                    |                        |
-|     PowerApps         |                    |      Chatbot           |
-|                       |                    |                        |
-+----------^------------+                    +------------^-----------+
-           |                                               |
-           |                                               |
-+----------v------------+                    +------------v-----------+
-|                       |                    |                        |
-|    Power Automate      |                    |      REST API          |
-|                       |                    |                        |
-+----------^------------+                    +------------^-----------+
-           |                                               |
-           |                                               |
-+----------v------------+                    +------------v-----------+
-|                       |                    |                        |
-|       Dataverse       |                    |      Azure Functions   |
-|                       |                    |                        |
-+----------^------------+                    +------------^-----------+
-           |                                               |
-           |                                               |
-+----------v------------+                    +------------v-----------+
-|                       |                    |                        |
-|       Cosmos DB       |                    |     Power BI           |
-|                       |                    |                        |
-+-----------------------+                    +------------------------+
-```
-
-Solution Architecture Description:
-
-The solution architecture diagram above shows how the various components can be used to build an inventory management system. The PowerApps platform can be used to build a custom application that allows employees to view and update product information. The application can be designed to work on multiple devices such as smartphones, tablets, and desktop computers.
-
-Power Automate can be used to set up workflows that generate alerts when stock levels are low or when certain conditions are met. For example, an alert can be generated when a product is out of stock or when the quantity of a product falls below a certain threshold.
-
-The chatbot can be used to allow employees to interact with the inventory management system using natural language. For example, an employee can ask the chatbot about the current stock levels for a particular product or request a report on inventory trends.
-
-The REST API can be used to expose data and functionality to external applications and services. For example, the inventory management system can be integrated with a supplier's system to automatically order products when stock levels fall below a certain threshold.
-
-Azure Functions can be used to host the REST API and provide serverless compute power. This ensures that the API is always available and can scale up or down as needed.
-
-Dataverse can be used to store and manage data used by the inventory management system. This includes information about products, suppliers, orders, and stock levels.
-
-Cosmos DB can be used to store and manage large volumes of data. Power BI can be used to generate reports on inventory trends and other key performance indicators. These reports can be embedded in the PowerApps application, allowing employees to view them without having to switch to another application.
-
-Overall, this solution architecture provides a highly scalable and extensible platform that can support a wide range of inventory management tasks.
-
-=======
-
-Migrating an existing Java web application to PowerApps would require a significant effort and a careful approach. Here are some general steps you could follow:
-
-1. Analyze the current Java web application: Before starting the migration process, it's important to understand the architecture, functionalities, and business requirements of the existing application. This analysis can help identify which parts of the application can be easily migrated and which ones require more work.
-
-2. Evaluate PowerApps capabilities: PowerApps is a low-code platform that allows building web and mobile applications. It is essential to understand the capabilities of the platform, such as data modeling, user interface design, and integration options, to determine whether it is suitable for your requirements.
-
-3. Identify data sources: Identify the data sources and databases used in the Java application. Depending on the complexity and structure of the data, it may require significant changes to move data to PowerApps.
-
-4. Determine the migration strategy: Based on the analysis of the existing application, determine the migration strategy. It could be a complete migration or a phased approach, where you migrate one or a few features at a time.
-
-5. Rebuild the application: To migrate the Java web application to PowerApps, you will need to rebuild the user interface and functionality using PowerApps. You can use the existing application as a reference to ensure that the migrated application has the same functionalities as the existing one.
-
-6. Integrate with other systems: PowerApps provides integration capabilities with other systems, including APIs, connectors, and custom connectors. Integrate with the necessary systems and test the integration to ensure it works correctly.
-
-7. Test and deploy: Thoroughly test the migrated application to ensure that it meets the business requirements and works as expected. After testing, deploy the application to the production environment.
-
-In summary, migrating an existing Java web application to PowerApps requires a careful approach, starting with analyzing the existing application and evaluating PowerApps' capabilities. Then, determine the migration strategy, rebuild the application in PowerApps, integrate it with other systems, and test and deploy it.
-
-
-====
-
-It's difficult to provide an exact sample Bonita workflow that can be written in PowerApps because the two platforms have different design principles and functionality. However, I can provide an example scenario and the corresponding steps that can be used to create a PowerApps application that implements a similar workflow to that of Bonita.
-
-Scenario: A company wants to create a simple approval workflow for expense reports submitted by employees.
-
-Bonita Workflow Steps:
-
-1. Employee submits an expense report.
-2. Supervisor reviews the expense report and approves or rejects it.
-3. If approved, the expense report is sent to the finance department for processing.
-4. If rejected, the expense report is sent back to the employee for revision.
-
-PowerApps Workflow Steps:
-
-1. Employee submits an expense report by filling out a form in a PowerApps application. The form collects information about the expense, such as the amount, date, description, and supporting documents.
-2. The form is submitted to a SharePoint list, where it is stored for further processing.
-3. A Power Automate flow is triggered when a new item is added to the SharePoint list. The flow sends an approval request email to the supervisor, with a link to the expense report form in the PowerApps application.
-4. The supervisor reviews the expense report form and approves or rejects it by clicking a button in the PowerApps application.
-5. If approved, the Power Automate flow is triggered again and sends an email notification to the finance department, requesting payment of the expense. The expense report form is also updated in the SharePoint list to reflect the approval status.
-6. If rejected, the Power Automate flow sends an email notification to the employee, with comments on how to revise the expense report. The employee can then revise the form in the PowerApps application and resubmit it to the SharePoint list.
-
-This example illustrates how a simple approval workflow can be implemented in PowerApps using SharePoint lists and Power Automate flows. While it may not be an exact replica of a Bonita workflow, it demonstrates how PowerApps can be used to implement similar business processes.
-
-By incorporating these DevOps practices, organizations can improve the development speed, collaboration, quality, and reliability of their low-code/no-code applications. It enables teams to deliver value to end-users faster, respond to feedback and changing requirements effectively, and ensure the overall success of the application.
-
-
-UIPath for automation testing in a low-code/no-code platform, organizations can achieve faster and more reliable testing, reduce manual effort, increase test coverage, and improve overall application quality.
-
-
-
-When working with low-code/no-code platforms, it's essential to implement appropriate security controls to protect the applications and the data they handle. Here are some possible security controls that can be applied:
-
-Authentication and Authorization: Implement strong authentication mechanisms, such as multi-factor authentication (MFA), to ensure only authorized users can access the low-code/no-code platform. Use role-based access control (RBAC) to define and enforce user permissions and privileges based on their roles and responsibilities.
-
-Secure Development Practices: Follow secure coding practices when designing and building applications on the low-code/no-code platform. This includes input validation, secure data handling, protection against common vulnerabilities (e.g., SQL injection, cross-site scripting), and adherence to industry-standard secure coding guidelines.
-
-Data Encryption: Encrypt sensitive data at rest and in transit to protect it from unauthorized access. Utilize encryption techniques such as SSL/TLS for data in transit and strong encryption algorithms for data at rest. Encryption keys should be securely managed and stored.
-
-Secure APIs: If the low-code/no-code platform exposes APIs, ensure they are secured with proper authentication, authorization, and encryption. Implement rate limiting, input validation, and output encoding to protect against API abuse and common security vulnerabilities.
-
-Logging and Monitoring: Implement comprehensive logging and monitoring mechanisms to track and monitor user activities, application events, and security-related incidents. Log files should be stored securely and regularly reviewed for suspicious activities or potential security breaches.
-
-Vulnerability Management: Regularly scan the low-code/no-code platform and its associated applications for vulnerabilities. Conduct vulnerability assessments and penetration testing to identify and address security weaknesses. Keep the platform and any third-party components up to date with security patches and updates.
-
-Secure Configuration Management: Implement secure configuration practices for the low-code/no-code platform and associated infrastructure. Ensure that default configurations are modified, unnecessary services are disabled, and secure protocols and encryption algorithms are used.
-
-User Awareness and Training: Provide user awareness training to educate users on security best practices, such as strong password management, phishing awareness, and data handling guidelines. Regularly communicate security policies and updates to ensure users are informed and vigilant.
-
-Incident Response and Disaster Recovery: Develop an incident response plan to effectively respond to security incidents and data breaches. Implement a robust backup and disaster recovery strategy to ensure business continuity and minimize the impact of any security events.
-
-Regular Security Assessments: Conduct regular security assessments, including penetration testing and security audits, to identify potential vulnerabilities and gaps in security controls. Regularly review and update security measures based on evolving threats and industry best practices.
-
-By implementing these security controls, organizations can enhance the security posture of their low-code/no-code platform, safeguard sensitive data, and protect against potential security threats and breaches.
-
-
-
-
+Overall its a wa of organizing and finding information faster.
 
 

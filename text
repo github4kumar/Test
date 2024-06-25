@@ -1,39 +1,41 @@
 Good afternoon everyone,
 
-In todays world data is everywhere , finding the relevant information becomes increasing challanging.
-Traditionally, we relied on crawling and indexing the vast dataset into a long running batch process to make just the data retival faster. But imagine if instead of just speeding up data retrival , we could apply additional Artificial Intilligence skills during the indexing process to produce more meaningful and precise search results. 
-That is where AZure AI search comes in. Azure AI search service is designed to handle large volume of data that integrates seamlessly with various datasources and delivers higly relevant results by leveraging the power of AI skillsets.
+In todays world data is everywhere , finding the relevant information becomes increasing challenging.
+Traditionally, we relied on crawling and indexing the vast dataset into a long running batch process to make just the data retrieval faster. But imagine if instead of just speeding up data retrieval , we could apply additional Artificial Intelligence skills during the indexing process to produce more meaningful and precise search results. 
+That is where Azure AI search comes in. Azure AI search service is designed to handle large volume of data that integrates seamlessly with various data sources and delivers highly relevant results by leveraging the power of AI skillsets.
 
-Lets breakdown the key building blocks of Azure AI search service and understnad how it works.
+Lets breakdown the key building blocks of Azure AI search service and understand how it works.
 
-The Datasources are the origin of the data we want to search. Azure AI search can connect to variety of sources such as AZure SQl DB, Blob Storage , COsmos DB and even external sources via REST API. This felxibility ensures you can bring data almost from any platform.
+The Data sources are the origin of the data we want to search. Azure AI search can connect to variety of sources such as unstructured files residing on blob storage, relational files store as tables in Azure SQL DB, Documents/Json from cosmos DB, data lake , SharePoint and even external sources via REST API. This flexibility ensures you can bring data almost from any platform. For example , there are many partners connectors like Adobe , JIRA , ECM tools like alfresco , Drupal , Documentum, JIRA, confluence  , google drive etc from where data can be sourced via their connectors or API.
 
-INdexers - are the automated process that pulls the data from the data sources into the search index on regular scheduled, ensuring that your search results are always upto date without manual intervention.
+Indexers - are the automated process that pulls the data from the data sources into the search index on regular scheduled, ensuring that your search results are always up to date without manual intervention. Its like a super organizer that arranges the data in different ways. It fits the data nicely in table and make sure its nicely linked correctly. For documents , it keeps them in the format specially JSON that shows how all the parts are connected i.e. document & its metadata. For files with pictures it saves the extracted images in jpg format.
 
 AI skillsets are where magics happens. The Inbuilt AI driven capabilities can extract meaningful
-information from the raw content. For example Optical character recognition (OCR) can read the data from the images, sentiment analysis can guage the tone of the documents and entity recognition can identify names and dates. We can even create  custom skills in the form of Azure function and apply during the indexing process.
+information from the raw content. For example Optical character recognition (OCR) can read the data from the images, sentiment analysis can gauge the tone of the documents and entity recognition can identify names and dates. Applying translation capabilities that can change text from one language to another making the data accessible in different language.
+We can even create  custom skills in the form of Azure function and apply during the indexing process.
 
-INDEX - The index is the core of the Azure AI search. It origanizes the data into the searchable structure. An index contains schema definition which outlines the fields and their types and documents, which are stored as  individual records. The structure allows for efficient searching and retrival of information 
+INDEX – Of course index meant for query results , which means when you search for something , the system can quickly find and show the relevant information.
+NEXT SLIDE==========
+The index is the core of the Azure AI search. It origanizes the data into the searchable structure. An index contains schema definition which outlines the fields and their types and documents, which are stored as  individual records. The structure allows for efficient searching and retrival of information 
 
 
 ====== Slide SOP
 
-This particlar slide depicts the design aspect of the Azure search and represents how it can  
-be utilize to extract , enrich and index SOP data from Blob storage, create a seamless user search experience 
+This particlar slide depicts the design aspect of the Azure search and represents how its being 
+utilize to extract , enrich and index SOP data from Blob storage, create a seamless user search experience 
 
 The unstructured PDF format SOP data resides on the Blob storeage container 
-The files are injested into the AI search service based on the indexer data sorce configration.
-Azure search provide built-in AI capabilities such as OCR, entity recoginitions to extract the relevant  information from the documents.
-Through these pre-built AI skills the extrated data or chunk of data is further ENRICHED with metadata , annotations  and its relationship
+The files are ingested into the AI search service based on the indexer data source configuration.
+Azure search provide built-in AI capabilities such as OCR, entity recognition to extract the relevant  information from the documents.
+Thhhrrrouuuugh these pre-built AI skills,,, the extracted data or chunk of data is further ENRICHED with metadata , annotations  and its relationship
 
 once the SOP data is extracted and enriched,  AI search indexes the documents making it searchable and accessible .
 
 A web application serves as the interface for the users to query the indexed SOP's documents.
 
-* Upon querying the index relevant documents contents are passed throught the GPT model to generate the summaries or contextual information
+* Upon querying the index relevant documents contents are passed through the GPT model to generate the summaries or contextual information
 
 * The GPT model enhances the understanding of SOP documents providing users with valuable insight and citation.
 
 Overall its a wa of organizing and finding information faster.
-
 
